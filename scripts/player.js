@@ -10,8 +10,8 @@ class Player {
     player.prettyTime(currentTime);
     player.prettyTime(totalTime);
     player.prettyTime(duration);
-    var newTime = Math.floor(duration);
-    $(this).text(newTime);
+    var timeInSeconds = Math.floor(duration);
+    $(this).text(timeInSeconds);
 
   }
   getDuration() {
