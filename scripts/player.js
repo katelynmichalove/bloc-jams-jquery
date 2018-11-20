@@ -7,13 +7,12 @@ class Player {
   }
 
   prettyTime (timeInSeconds) {
-    player.prettyTime(currentTime);
-    player.prettyTime(totalTime);
-    player.prettyTime(duration);
-    var timeInSeconds = Math.floor(duration);
-    $(this).text(timeInSeconds);
-
+    var minutes = Math.floor(timeInSeconds / 60);
+    var seconds = timeInSeconds - minutes * 60;
+    var finalTime = minutes + ':' + seconds;
+    $(this).text(finalTime);
   }
+  
   getDuration() {
     return this.soundObject.getDuration();
   }
