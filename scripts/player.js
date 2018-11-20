@@ -6,7 +6,6 @@ class Player {
     this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
   }
 
-
   getDuration() {
     return this.soundObject.getDuration();
   }
@@ -47,6 +46,13 @@ class Player {
   setVolume (percent) {
     this.volume = percent;
     this.soundObject.setVolume(percent);
+  }
+
+  prettyTime (timeInSeconds) {
+    var min = Math.floor(timeInSeconds / 60);
+    var sec = Math.floor(timeInSeconds % 60);
+    return (min + ":" + sec);
+
   }
 }
 
