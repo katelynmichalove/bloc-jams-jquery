@@ -17,10 +17,18 @@
     $('button#previous').on('click', function() {
       if (player.playState !== 'playing') {return; }
 
+<<<<<<< HEAD
       const previousSongIndex = currentSongIndex - 1;
       if (nextSongIndex) >= album.songs.length) {return; }
       const previousSong = album.songs[previousSongIndex];
       player.playPause(previousSong);
 
+=======
+      const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
+      const previousSongIndex = currentSongIndex - 1;
+      if (currentSongIndex < 1) {return; }
+      const previousSong = album.songs[previousSongIndex];
+      player.playPause(previousSong);
+>>>>>>> checkpoint-10-assignment
     });
 }
