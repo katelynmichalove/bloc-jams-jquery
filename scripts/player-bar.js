@@ -11,7 +11,7 @@
       const nextSongIndex = currentSongIndex + 1;
       if (nextSongIndex >= album.songs.length) {return; }
       const nextSong = album.songs[nextSongIndex];
-      (nextSong);
+      helper.playPauseAndUpdate(nextSong);
     });
 
     $('button#previous').on('click', function() {
