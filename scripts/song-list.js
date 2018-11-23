@@ -10,7 +10,7 @@
           </button>
         </td>
         <td>${song.title}</td>
-        <td>${player.prettyTime(song.duration)}</td>
+        <td>${song.duration}</td>
       </tr>
       `);
       song.element.on('click', event => {
